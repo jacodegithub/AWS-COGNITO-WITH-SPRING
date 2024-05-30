@@ -1,0 +1,42 @@
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          cognito:
+            client-id: ""
+            client-secret: ""
+            scope: openid, email, profile
+            redirect-uri: "http://localhost:8080/login/oauth2/code/cognito"
+            authorization-grant-type: authorization_code
+        provider:
+          cognito:
+            issuer-uri: "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_w5BD2MI1A"   
+
+
+cognito:
+  userPoolId: us-east-1_w5BD2MI1A
+                      
+
+#aws:
+#  cognito: 
+#    logoutUrl: "https://brpldomain01.auth.us-east-1.amazoncognito.com/logout"                    
+#    logout:
+#      success:
+#        redirectUrl: "http://localhost:8080/logout"        
+#  accessKey: ""
+#  secretKey: ""       
+#  region: "us-east-1"          
+            
+#spring:
+  security:
+    user:
+      name: "user"
+      password: "password"
+            
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG          

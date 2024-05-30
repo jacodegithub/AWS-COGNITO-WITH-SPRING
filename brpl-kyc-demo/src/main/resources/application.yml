@@ -1,0 +1,32 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: brpl-kyc-demo
+    
+  datasource:
+    url: jdbc:mysql://brpl-kyc-db.cl40q8es0o1n.us-east-1.rds.amazonaws.com:3306/brpl_kyc_data?useSSL=false
+    username: root
+    password: brpl1234
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+      
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  servlet:
+    multipart:
+       max-file-size: 20MB
+       max-request-size: 20MB
+      
+upload:
+  image: images/
+  
+aws:      
+  accessKey: ""
+  secretKey: ""  
+  region: "us-east-1"  

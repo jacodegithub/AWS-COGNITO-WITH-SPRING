@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC FORM</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            flex-direction: column;
+        }
+        .fbx {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        input[type='text'],[type='tel'] {
+            border-radius: 5px;
+            border: none;
+            height: 30px;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            background-color: antiquewhite;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        button {
+            border: none;
+            outline: none;
+            padding: 10px;
+            background-color: black;
+            color: aliceblue;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KYC Information</h1>
+        <form id="kycForm" action="submit" method="post">
+            <div class="fbx">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+            </div>
+            <div class="fbx">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+            </div>
+            <div class="fbx">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+            </div>
+            <div class="fbx">
+                <label for="pancard">PAN Card Number:</label>
+                <input type="text" id="pancard" name="pancard" required><br><br>
+            </div>
+            <div class="fbx">
+                <label for="aadhar">Aadhar Number:</label>
+                <input type="text" id="aadhar" name="aadhar" required><br><br>
+            </div>
+            <div class="fbx">
+                <label for="aadharImage">Aadhar Image:</label>
+                <input type="file" id="aadharImage" name="aadharImage" accept="image/*" required><br><br>
+                <img id="aadharPreview" src="#" alt="Aadhar Image Preview" style="display: none; max-width: 100px; max-height: 100px;">
+            </div>
+            <div class="fbx">
+                <label for="pancardImage">PAN Card Image:</label>
+                <input type="file" id="pancardImage" name="pancardImage" accept="image/*" required><br><br>
+                <img id="pancardPreview" src="#" alt="PAN Card Image Preview" style="display: none; max-width: 100px; max-height: 100px;">
+            </div>
+            <div class="fbx">
+                
+            </div>
+            <button type="submit">Submit KYC Information</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
